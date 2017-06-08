@@ -30,7 +30,7 @@ func getAccess(u User) bool {
 }
 
 func main() {
-	country := Country { "USA" }
+    country := Country { "USA" }
     user := User{ 30, "Bob", 100, country }
     fmt.Println(user.greeting())
     fmt.Println(getInfo(user))
