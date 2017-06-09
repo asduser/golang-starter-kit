@@ -8,16 +8,22 @@ import (
 	"strings"
 )
 
+type User struct {
+		Name string
+		Age string
+	}
+
 func main() {
+	// data
 	const jsonSerialized = `
 		{"Name": "Ed", "Age": "20"}
 		{"Name": "Sam", "Age": "35"}
 	`
-	type User struct {
-		Name string
-		Age string
-	}
+    
+    // json -> object
 	dec := json.NewDecoder(strings.NewReader(jsonSerialized))
+
+	// functionality
 	for {
 		var user User
 		if err := dec.Decode(&user); err == io.EOF {
