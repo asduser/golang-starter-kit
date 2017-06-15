@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+
 type Country struct {
 	Name string
 }
